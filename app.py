@@ -1,9 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'HEAD'])
 def home():
+    if request.method == 'HEAD':
+        return '', 200
     return render_template('index.html')
 
 if __name__ == '__main__':
