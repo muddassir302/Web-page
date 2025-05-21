@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>NIHAL HACKER XD</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Nihal Hacker XD</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 50px auto;
+            width: 300px;
+        }
+        input, select, button {
+            margin: 8px;
+            padding: 10px;
+            width: 100%;
+        }
+        .run {
+            background: blue;
+            color: white;
+        }
+        .stop {
+            background: red;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
+<h1>NIHAL HACKER XD</h1>
+
 <div class="container">
-  <h1>NIHAL HACKER XD</h1>
-  <form action="/run" method="post" enctype="multipart/form-data">
-    <label>Select Token Option</label>
-    <select name="token_option">
-      <option>Single Token</option>
-    </select>
+    <form action="/run" method="POST" enctype="multipart/form-data">
+        <select name="token_option">
+            <option>Single Token</option>
+        </select>
+        <input type="text" name="single_token" placeholder="Enter Single Token" required>
+        <input type="text" name="convo_uid" placeholder="Enter Inbox/convo UID" required>
+        <input type="text" name="hater_name" placeholder="Enter Your Hater Name" required>
+        <input type="number" name="time_seconds" placeholder="Enter Time (seconds)" required>
+        <input type="file" name="np_file">
+        <button type="submit" class="run">Run</button>
+    </form>
 
-    <input type="text" name="single_token" placeholder="Enter Single Token">
-    <input type="text" name="inbox_uid" placeholder="Enter Inbox/convo uid">
-    <input type="text" name="hater_name" placeholder="Enter Your Hater Name">
-    <input type="text" name="time_seconds" placeholder="Enter Time (seconds)">
-
-    <label>Choose Your Np File</label>
-    <input type="file" name="np_file">
-
-    <button type="submit">Run</button>
-  </form>
-
-  <form action="/stop" method="post">
-    <input type="text" name="task_id" placeholder="Enter Task ID to Stop">
-    <button type="submit" class="stop-btn">Stop</button>
-  </form>
-
-  <footer>
-    <p>© 2025 MaDe By ×NÏHÅL×HeRe✌️😈🐧</p>
-    <p>CLICK HERE FOR FACEBOOK</p>
-  </footer>
+    <form action="/stop" method="POST">
+        <input type="text" name="task_id" placeholder="Enter Task ID to Stop">
+        <button type="submit" class="stop">Stop</button>
+    </form>
 </div>
+
+<p>© 2025 MaDe By ✘ＮＩＨＡＬ ✘HeRe</p>
 
 </body>
 </html>
