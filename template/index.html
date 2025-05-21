@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NIHAL HACKER XD</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+  <h1>NIHAL HACKER XD</h1>
+  <form action="/run" method="post" enctype="multipart/form-data">
+    <label>Select Token Option</label>
+    <select name="token_option">
+      <option>Single Token</option>
+    </select>
+
+    <input type="text" name="single_token" placeholder="Enter Single Token">
+    <input type="text" name="inbox_uid" placeholder="Enter Inbox/convo uid">
+    <input type="text" name="hater_name" placeholder="Enter Your Hater Name">
+    <input type="text" name="time_seconds" placeholder="Enter Time (seconds)">
+
+    <label>Choose Your Np File</label>
+    <input type="file" name="np_file">
+
+    <button type="submit">Run</button>
+  </form>
+
+  <form action="/stop" method="post">
+    <input type="text" name="task_id" placeholder="Enter Task ID to Stop">
+    <button type="submit" class="stop-btn">Stop</button>
+  </form>
+
+  <footer>
+    <p>© 2025 MaDe By ×NÏHÅL×HeRe✌️😈🐧</p>
+    <p>CLICK HERE FOR FACEBOOK</p>
+  </footer>
+</div>
+
+</body>
+</html>
